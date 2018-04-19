@@ -1,5 +1,6 @@
 var m = require("mithril")
 
+// use jsx
 module.exports  = {
   view: function() {
     return (
