@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "npm-run-all --parallel watch:server watch:build-dev",
     "start": "npm-run-all --parallel watch:server watch:build",
-    "watch:build"  : "webpack -d --watch",
-    "watch:server" : "nodemon server --watch src/"
+    "watch:build-dev": "webpack -d --watch",
+    "watch:build": "webpack -p",
+    "watch:server": "nodemon server --watch src/"
   },
   "keywords": [
     "mithril",
@@ -16,9 +18,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.1.0",
+    "css-loader": "^0.28.11",
     "express": "^4.16.3",
+    "jquery": "^3.3.1",
     "mithril": "^1.1.6",
-    "npm-run-all": "^4.1.2"
+    "npm-run-all": "^4.1.2",
+    "popper.js": "^1.14.3",
+    "style-loader": "^0.21.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -30,7 +37,9 @@
     "webpack-cli": "^2.0.14"
   },
   "nodemonConfig": {
-    "ignore": ["build/*"],
+    "ignore": [
+      "build/*"
+    ],
     "delay": "1500"
   }
 }
