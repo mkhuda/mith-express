@@ -1,13 +1,9 @@
 var m = require("mithril")
-
+var Routes = require('./routes')
 // import bootstrap and jquery
 var $ = require('jquery')
 window.$ = $;
 require("bootstrap")
 require('bootstrap/dist/css/bootstrap.min.css')
 
-// import components here
-var MyComponent = require("./components/MyComponent")
-
-// render by mithril
-m.render(document.body, <MyComponent />)
+m.route(document.body, "/", Routes)
