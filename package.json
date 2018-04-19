@@ -1,8 +1,8 @@
 {
   "name": "mithril-framework",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Mithril and Express Boilerplate",
+  "main": "server.js",
   "scripts": {
     "dev": "npm-run-all --parallel watch:server watch:build-dev",
     "start": "npm-run-all --parallel watch:server watch:build",
