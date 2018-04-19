@@ -4,20 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack src/index.js --output build/bundle.js -p && node server",
-    "mith": "nodemon server"
+    "start": "npm-run-all --parallel watch:server watch:build",
+    "watch:build"  : "webpack -d --watch",
+    "watch:server" : "nodemon server --watch src/"
   },
-  "keywords": [],
+  "keywords": [
+    "mithril",
+    "mithriljs",
+    "express"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "mithril": "^1.1.6"
+    "mithril": "^1.1.6",
+    "npm-run-all": "^4.1.2"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "nodemon": "^1.17.3",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.14"
+  },
+  "nodemonConfig": {
+    "ignore": ["build/*"],
+    "delay": "1500"
   }
 }
