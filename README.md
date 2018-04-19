@@ -1,4 +1,4 @@
-# Mithril JS and Express
+# Mithril JS and Express (Boilerplate)
 
 Basic Mithril, built with Express. This project also uses JSX and ES6 via Babel Plugin
 
@@ -22,7 +22,7 @@ $ npm start
 
 ### Development Purpose
 
-This project still maintaining but you can create Mithril based app through this simple work. I also added bootstrap for default styling.
+This project still maintaining but you can create Mithril based app through this boiler work. I also added bootstrap for default styling.
 
 ## Built With
 
