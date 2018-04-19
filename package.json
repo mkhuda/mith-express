@@ -1,0 +1,23 @@
+{
+  "name": "mithril-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack src/index.js --output build/bundle.js -p && node server",
+    "mith": "nodemon server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mithril": "^1.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14"
+  }
+}
