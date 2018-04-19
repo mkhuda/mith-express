@@ -4,7 +4,9 @@ module.exports  = {
   view: function() {
     return (
       <main>
-        <h1>Mithril Express Loaded</h1>
+        <div className="container">
+          <h1>Mithril Express Loaded</h1>
+        </div>
       </main>
     )
   }
