@@ -1,7 +1,5 @@
-var m = require("mithril")
+const User = {
+  list: ['Habib', 'Andre', 'Simic'],
+};
 
-var User = {
-    list: ["Habib", "Andre", "Simic"],
-}
-
-module.exports = User
+module.exports = User;
