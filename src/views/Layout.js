@@ -4,7 +4,7 @@ module.exports = {
   view(vnode) {
     return (
       <div className='container'>
-        <Header />
+        {m(Header)}
         {vnode.children}
       </div>
     );
