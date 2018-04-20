@@ -1,12 +1,12 @@
-const User = require('../models/User');
-
 module.exports = {
-  oninit: User.loadList,
+  oninit(vnode) {
+    this.user = vnode.attrs.data.list;
+  },
   view() {
     return (
       <div className="container">
         {
-          User.list.map(user => <div className="alert alert-primary" role="alert">{user}</div>)
+          this.user.map(user => <div className="alert alert-primary" role="alert">{user}</div>)
         }
       </div>
     );

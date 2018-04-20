@@ -1,6 +1,7 @@
 const Layout = require('./views/Layout');
 const Welcome = require('./views/Welcome');
 const UserList = require('./views/UserList');
+const UserModel = require('./models/User');
 
 module.exports = {
   '/': {
@@ -10,7 +11,7 @@ module.exports = {
   },
   '/user': {
     view() {
-      return m(Layout, m(UserList));
+      return m(Layout, m(UserList, { data: UserModel }));
     },
   },
 };
