@@ -1,5 +1,4 @@
-# Mithril JS and Express (Boilerplate) [![Build Status](https://travis-ci.org/mkhuda/mith-express.svg?branch=master)](https://travis-ci.org/mkhuda/mith-express)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c355526df7d41139076c55a3f769ef4)](https://www.codacy.com/app/mhmmd.huda/mith-express?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mkhuda/mith-express&amp;utm_campaign=Badge_Grade)
+# Mithril JS and Express (Boilerplate) [![Build Status](https://travis-ci.org/mkhuda/mith-express.svg?branch=master)](https://travis-ci.org/mkhuda/mith-express) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c355526df7d41139076c55a3f769ef4)](https://www.codacy.com/app/mhmmd.huda/mith-express?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mkhuda/mith-express&amp;utm_campaign=Badge_Grade)
 
 !['tree_structure'](https://raw.githubusercontent.com/mkhuda/mith-express/master/tree-structure.png)
 
@@ -11,9 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- NPM
-- ExpressJS
-- Mithril
+- Node Environment, I prever use NVM.
 
 ### Installing
 
@@ -22,6 +19,10 @@ These instructions will get you a copy of the project up and running on your loc
 ```
 $ npm install
 $ npm run dev
+```
+- Testing
+```
+$ npm test
 ```
 
 ### Development Purpose
