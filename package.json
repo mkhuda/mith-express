@@ -1,6 +1,6 @@
 {
   "name": "mithril-framework",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Mithril and Express Boilerplate",
   "private": true,
   "scripts": {
@@ -16,8 +16,12 @@
     "mithriljs",
     "express"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkhuda/mith-express.git"
+  },
   "author": "Muhammad K. Huda",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.1.0",
     "css-loader": "^0.28.11",
