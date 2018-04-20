@@ -4,12 +4,14 @@
   "description": "Mithril and Express Boilerplate",
   "private": true,
   "scripts": {
-    "dev": "npm-run-all --parallel eslint:watch watch:server watch:build-dev",
+    "dev": "npm-run-all --parallel watch:server watch:build-dev",
     "eslint:watch": "eslint src/",
     "start": "npm-run-all --parallel watch:server watch:build",
     "watch:build-dev": "webpack -d --watch",
     "watch:build": "webpack -p",
-    "watch:server": "nodemon server --watch src/"
+    "watch:server": "nodemon server --watch src/",
+    "test": "jest",
+    "babel-test": "rm -rf test-utils/* && babel src --out-dir test-utils/"
   },
   "keywords": [
     "mithril",
@@ -44,6 +46,10 @@
     "eslint-plugin-import": "^2.11.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^22.4.3",
+    "jsdom": "11.8.0",
+    "jsdom-global": "3.0.2",
+    "mithril-query": "^2.4.0",
     "nodemon": "^1.17.3",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.14"
