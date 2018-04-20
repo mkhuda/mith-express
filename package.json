@@ -4,7 +4,8 @@
   "description": "Mithril and Express Boilerplate",
   "private": true,
   "scripts": {
-    "dev": "npm-run-all --parallel watch:server watch:build-dev",
+    "dev": "npm-run-all --parallel eslint:watch watch:server watch:build-dev",
+    "eslint:watch": "eslint src/",
     "start": "npm-run-all --parallel watch:server watch:build",
     "watch:build-dev": "webpack -d --watch",
     "watch:build": "webpack -p",
