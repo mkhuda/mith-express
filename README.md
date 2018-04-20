@@ -17,7 +17,8 @@ These instructions will get you a copy of the project up and running on your loc
 - Clone this project
 - And simply run
 ```
-$ npm start
+$ npm install
+$ npm run dev
 ```
 
 ### Development Purpose
