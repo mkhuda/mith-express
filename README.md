@@ -1,4 +1,5 @@
-# Mithril JS and Express (Boilerplate)
+# Mithril JS and Express (Boilerplate) [![Build Status](https://travis-ci.org/mkhuda/mith-express.svg?branch=master)](https://travis-ci.org/mkhuda/mith-express)
+=====
 
 Basic Mithril, built with Express. This project also uses JSX and ES6 via Babel Plugin. It doesn't seems like standard Mithril because I use JSX as syntax extension, but you can use Hyperscript if really want. The freedom of optional by Mithril.
 
