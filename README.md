@@ -1,6 +1,6 @@
 # Mithril JS and Express (Boilerplate)
 
-Basic Mithril, built with Express. This project also uses JSX and ES6 via Babel Plugin. It doesn't seems like standard Mithril because I use JSX as syntax extension, but you can use Hyperscript if really want.
+Basic Mithril, built with Express. This project also uses JSX and ES6 via Babel Plugin. It doesn't seems like standard Mithril because I use JSX as syntax extension, but you can use Hyperscript if really want. The freedom of optional by Mithril.
 
 ## Getting Started
 
