@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "npm-run-all --parallel watch:server watch:build-dev",
     "eslint:watch": "eslint src/",
-    "start": "node server",
+    "start": "npm-run-all --parallel watch:build start:production",
     "watch:build-dev": "webpack -d --watch",
     "watch:build": "webpack -p",
     "watch:server": "nodemon server --watch src/",
+    "start:production": "node server",
     "test": "jest",
     "babel-test": "rm -rf test-utils/* && babel src --out-dir test-utils/"
   },
@@ -25,9 +26,11 @@
   "author": "Muhammad K. Huda",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "bootstrap": "^4.1.0",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "jquery": "^3.3.1",
     "mithril": "^1.1.6",
     "npm-run-all": "^4.1.2",
