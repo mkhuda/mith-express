@@ -1,13 +1,19 @@
+const User = require('../models/User');
+const Header = require('../components/Header');
+
 module.exports = {
-  oninit(vnode) {
-    this.user = vnode.attrs.data.list;
+  oninit() {
+    this.user = User.list;
   },
   view() {
     return (
       <div className="container">
-        {
-          this.user.map(user => <div className="alert alert-primary" role="alert">{user}</div>)
-        }
+        {m(Header)}
+        <div className="container">
+          {
+            this.user.map(user => <div className="alert alert-primary" role="alert">{user}</div>)
+          }
+        </div>
       </div>
     );
   },
