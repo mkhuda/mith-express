@@ -1,6 +1,5 @@
 const Welcome = require('./views/Welcome');
 const UserList = require('./views/UserList');
-const UserModel = require('./models/User');
 
 module.exports = {
   '/': {

@@ -1,6 +1,5 @@
 const Header = require('../components/Header');
 
-
 module.exports = {
   view() {
     return (
