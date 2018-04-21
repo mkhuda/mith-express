@@ -1,8 +1,7 @@
 // require('jsdom-global')()
-global.window = Object.assign(require('mithril/test-utils/domMock.js')(), require('mithril/test-utils/pushStateMock')())
-const o = require('mithril/ospec/ospec')
-const WelcomeView = require('../test-utils/views/Welcome')
-const mq = require('mithril-query')
+global.window = Object.assign(require('mithril/test-utils/domMock.js')(), require('mithril/test-utils/pushStateMock')());
+const WelcomeView = require('../test-utils/views/Welcome');
+const mq = require('mithril-query');
 
 const output = mq(WelcomeView);
 const root = output.rootNode;

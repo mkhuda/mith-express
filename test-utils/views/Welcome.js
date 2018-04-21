@@ -1,6 +1,5 @@
-'use strict';
-var m = require('mithril')
-// use jsx
+const m = require('mithril');
+
 module.exports = {
   view: function view() {
     return m(
@@ -12,30 +11,34 @@ module.exports = {
         m(
           'h1',
           { className: 'display-4' },
-          'Hello, Guys'
+          'Hello, Guys',
         ),
         m(
           'p',
           { className: 'lead' },
-          'This is a simple Mithril base app'
+          'This is a simple Mithril base app',
         ),
         m('hr', { className: 'my-4' }),
         m(
           'p',
           null,
-          'It uses utility ExpressJS and Bootsrap for styling.'
+          'It uses utility ExpressJS and Bootsrap for styling.',
         ),
         m(
           'p',
           { className: 'lead' },
           m(
             'a',
-            { className: 'btn btn-primary btn-lg', href: '/user', oncreate: m.route.link, role: 'button' },
-            'What\'s Next'
-          )
-        )
-      )
+            {
+              className: 'btn btn-primary btn-lg',
+              href: '/user',
+              oncreate: m.route.link,
+              role: 'button',
+            },
+            'What\'s Next',
+          ),
+        ),
+      ),
     );
-  }
+  },
 };
-//# sourceMappingURL=Welcome.js.map
