@@ -1,3 +1,2 @@
-build/**/*.js
-build/**/*.json
+build/
 node_modules/
