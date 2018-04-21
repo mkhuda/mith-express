@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "npm-run-all --parallel eslint:watch watch:build-dev watch:server",
     "eslint:watch": "eslint src/",
-    "start": "npm-run-all --parallel watch:build start:production",
+    "start": "node server",
     "watch:build-dev": "webpack -d --watch",
     "watch:build": "webpack -p",
     "watch:server": "nodemon server --watch src/",
     "start:production": "node server",
     "test": "jest",
-    "babel-test": "rm -rf test-utils/* && babel src --out-dir test-utils/"
+    "babel-test": "rm -rf test-utils/* && babel src --out-dir test-utils/",
+    "postinstall": "webpack -p"
   },
   "keywords": [
     "mithril",
