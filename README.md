@@ -2,7 +2,7 @@
 
 !['tree_structure'](https://raw.githubusercontent.com/mkhuda/mith-express/master/tree-structure.png)
 
-Basic Mithril, built with Express. This project also uses JSX and ES6 via Babel Plugin. It doesn't seems like standard Mithril because I use JSX as syntax extension, but you can use Hyperscript if really want. The freedom of optional by Mithril.
+Basic Mithril, built with Express. This project also uses JSX via Babel Plugin. It doesn't seems like standard Mithril because I use JSX as syntax extension, but you can use Hyperscript if really want. The freedom of optional by Mithril.
 
 ## Getting Started
 
