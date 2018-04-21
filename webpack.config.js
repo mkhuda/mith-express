@@ -2,12 +2,19 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, './build'),
     filename: 'bundle.js',
+  },
+  devServer: {
+    contentBase: path.join(__dirname, './build'),
+    compress: true,
+    port: 9000,
+    hot: true,
   },
   module: {
     rules: [
@@ -32,6 +39,9 @@ module.exports = {
     new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
       title: 'Mithril Sample App',
+    }),
+    new UglifyJsPlugin({
+      test: /\.js($|\?)/i,
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
