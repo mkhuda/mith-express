@@ -1,20 +1,10 @@
-const User = require('../models/User');
-const Header = require('../components/Header');
+const m = require('mithril');
+const Layout = require('./Layout');
 
 module.exports = {
-  oninit() {
-    this.user = User.list;
-  },
   view() {
-    return (
-      <div className="container">
-        {m(Header)}
-        <div className="container">
-          {
-            this.user.map(user => <div className="alert alert-primary" role="alert">{user}</div>)
-          }
-        </div>
-      </div>
-    );
+    return [
+      m(Layout, m('.user-list', 'User List', m('br'), m('a[href=/]', { oncreate: m.route.link }, 'Go back'))),
+    ];
   },
 };
