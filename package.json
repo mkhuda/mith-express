@@ -4,9 +4,9 @@
   "description": "Mithril and Express Boilerplate",
   "private": true,
   "scripts": {
-    "dev": "npm-run-all --parallel eslint:watch watch:build-dev watch:server",
+    "dev": "npm-run-all --parallel watch:build-dev watch:server",
     "eslint:watch": "eslint src/",
-    "start": "node server",
+    "start": "npm-run-all --parallel watch:build start:production",
     "watch:build-dev": "webpack -d --watch",
     "watch:build": "webpack -p",
     "watch:server": "nodemon server --watch src/",
@@ -35,6 +35,7 @@
     "express-session": "^1.15.6",
     "jquery": "^3.3.1",
     "mithril": "^1.1.6",
+    "mithril-node-render": "^2.3.0",
     "npm-run-all": "^4.1.2",
     "popper.js": "^1.14.3",
     "style-loader": "^0.21.0"
