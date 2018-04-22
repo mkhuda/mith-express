@@ -1,3 +1,4 @@
+const m = require('mithril');
 const Welcome = require('./views/Welcome');
 const UserList = require('./views/UserList');
 
