@@ -5,8 +5,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const extractSass = new ExtractTextPlugin({
-    filename: "application.css",
-    disable: process.env.NODE_ENV === "development"
+  filename: 'application.css',
+  disable: process.env.NODE_ENV === 'development',
 });
 
 module.exports = {
