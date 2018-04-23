@@ -1,25 +1,29 @@
-const Header = require('../components/Header');
+const m = require('mithril');
+const Layout = require('./Layout');
+const Footer = require('../components/Footer');
 
 module.exports = {
-  view() {
-    return (
-      <div className='container'>
-        {m(Header)}
-        <div className='container'>
-          <div className='jumbotron'>
-            <h1 className='display-4'>Hello, Mister</h1>
-            <p className='lead'>This is a simple Mithril base app</p>
-            <hr className='my-4' />
-            <p>It uses utility ExpressJS and Bootsrap for styling.</p>
-            <p className='lead'>
-              <a className='btn btn-primary btn-lg' href='/user' oncreate={m.route.link} role='button'>
-              What's Next
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    );
+  onmatch(params, url) {
+    return {
+      oninit() {
+        this.state = { pageTitle: 'Welcome', params, url };
+      },
+      view() {
+        return [
+          m(Layout, this.state, m('.container', m('.columns', [
+            m('.column col-6 col-mx-auto', [
+              m('br'), m('br'), m('br'), m('br'), m('br'),
+              m('.text-center', m('h1', 'Welcome to Mithrill App')),
+              m('br'),
+              m('.text-center', [
+                m('a[class=btn btn-primary][href=/user]', { oncreate: m.route.link }, 'See other page'),
+              ]),
+              m(Footer),
+            ]),
+          ]))),
+        ];
+      },
+    };
   },
 };
 

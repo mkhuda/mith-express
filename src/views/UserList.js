@@ -1,20 +1,31 @@
-const User = require('../models/User');
-const Header = require('../components/Header');
+const m = require('mithril');
+const Layout = require('./Layout');
+const Footer = require('../components/Footer');
 
 module.exports = {
-  oninit() {
-    this.user = User.list;
-  },
-  view() {
-    return (
-      <div className="container">
-        {m(Header)}
-        <div className="container">
-          {
-            this.user.map(user => <div className="alert alert-primary" role="alert">{user}</div>)
-          }
-        </div>
-      </div>
-    );
+  onmatch(params, url) {
+    return {
+      oninit() {
+        this.state = { pageTitle: 'User List', params, url };
+      },
+      view() {
+        return [
+          m(Layout, this.state, m('.container', m('.columns', [
+            m('.column col-6 col-mx-auto', [
+              m('br'), m('br'), m('br'), m('br'), m('br'),
+              m('.text-center', m('h2', 'And this is the other page')),
+              m('br'),
+              m('.text-center', m(
+                'a[class=btn][href=/]',
+                { oncreate: m.route.link },
+                m('i.icon icon-arrow-left'),
+                'Back to home page',
+              )),
+              m(Footer),
+            ]),
+          ]))),
+        ];
+      },
+    };
   },
 };

@@ -1,4 +1,6 @@
-const Routes = require('./routes');
-require('bootstrap/dist/css/bootstrap.min.css');
+const m = require('mithril');
+const route = require('./routes');
+require('../spectre/style.scss');
 
-m.route(document.body, '/', Routes);
+m.route.prefix('');
+m.route(document.body, '/', route);
