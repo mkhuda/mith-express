@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "run-p watch:build-dev start:production",
     "eslint:watch": "eslint src/",
-    "start": "npm-run-all --parallel watch:build start:production",
+    "start": "npm run start:production",
     "watch:build-dev": "webpack -d --watch",
     "watch:build": "webpack -p",
     "watch:server": "nodemon server --watch src/",
@@ -50,7 +50,7 @@
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.11.0",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^22.4.3",
