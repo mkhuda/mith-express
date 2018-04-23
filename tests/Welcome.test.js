@@ -1,17 +1,17 @@
 // require('jsdom-global')()
 global.window = Object.assign(require('mithril/test-utils/domMock.js')(), require('mithril/test-utils/pushStateMock')());
-const WelcomeView = require('../test-utils/views/Welcome');
+const WelcomeView = require('../src/views/Welcome');
 const mq = require('mithril-query');
 
 const output = mq(WelcomeView);
 const root = output.rootNode;
-const jumbotron = root.renderedChildren[0];
+const column = root[0][1].renderedChildren[0];
 
-test('Root tag of WelcomeView to be div', () => {
-  expect(root.tag).toBe('div');
+test('HTML containing head', () => {
+  expect(column.tag).toBe('head');
 });
 
-test('Jumbroton should be viewed', () => {
-  expect(jumbotron.attrs.className).toBe('jumbotron');
+test('Head containing title Welcome', () => {
+  expect(column.children[3].text).toBe('Welcome | Mithril Express');
 });
 
