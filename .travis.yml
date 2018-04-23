@@ -7,5 +7,6 @@ cache:
     - node_modules
 install:
   - npm install
-script: 
+script:
+  - npm run watch:build
   - npm test
