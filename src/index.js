@@ -1,6 +1,6 @@
 const m = require('mithril');
 const route = require('./routes');
-require('./style/styles.css');
+require('../spectre/style.scss');
 
 m.route.prefix('');
 m.route(document.body, '/', route);
