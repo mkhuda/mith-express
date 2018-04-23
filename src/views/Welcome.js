@@ -6,7 +6,7 @@ module.exports = {
   onmatch(params, url) {
     return {
       oninit() {
-        this.state = { pageTitle: 'Welcome' };
+        this.state = { pageTitle: 'Welcome', params, url };
       },
       view() {
         return [
