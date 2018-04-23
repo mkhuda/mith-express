@@ -2,6 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const extractSass = new ExtractTextPlugin({
+    filename: "application.css",
+    disable: process.env.NODE_ENV === "development"
+});
 
 module.exports = {
   entry: './src/index.js',
@@ -23,10 +29,19 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
+        // test: /\.scss$/,
+        // use: ['style-loader', 'css-loader', 'sass-loader'],
+      }, {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-      {
+        use: extractSass.extract({
+          use: [{
+            loader: 'css-loader',
+          }, {
+            loader: 'sass-loader',
+          }],
+          fallback: 'style-loader',
+        }),
+      }, {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           'file-loader',
@@ -44,6 +59,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       m: 'mithril',
     }),
+    extractSass,
   ],
   performance: {
     hints: process.env.NODE_ENV === 'production' ? 'warning' : false,
