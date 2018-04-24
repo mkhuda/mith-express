@@ -11,7 +11,7 @@ module.exports = {
       m(Layout, this.state, m('.container', m('.columns', [
         m('.column col-6 col-mx-auto', [
           m('br'), m('br'), m('br'), m('br'), m('br'),
-          m('.text-center', m('h1', 'Welcome to Mithrill App')),
+          m('.text-center', m('h1', 'Welcome to Mithril Express App')),
           m('br'),
           m('.text-center', [
             m('a[class=btn btn-primary][href=/user]', { oncreate: m.route.link }, 'See other page'),
