@@ -27,21 +27,31 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      },
-      {
-        // test: /\.scss$/,
-        // use: ['style-loader', 'css-loader', 'sass-loader'],
-      }, {
+      },{
         test: /\.scss$/,
         use: extractSass.extract({
           use: [{
-            loader: 'css-loader',
-          }, {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: (loader) => [
+                require('autoprefixer')(),
+                require('precss')(),
+                require('cssnano')({
+                  preset: ['default', {
+                    discardComments: {
+                      removeAll: true,
+                    },
+                  }]
+                }),
+              ],
+            },
+          },{
             loader: 'sass-loader',
           }],
           fallback: 'style-loader',
         }),
-      }, {
+      },{
         test: /\.(png|svg|jpg|gif)$/,
         use: [
           'file-loader',
