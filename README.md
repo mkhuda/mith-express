@@ -27,7 +27,7 @@ $ npm test
 
 ### Development Purpose
 
-This project still maintaining but you can create Mithril based app through this boiler work. I also added bootstrap for default styling.
+This project still maintaining but you can create Mithril based app through this boiler work. I also added Spectre CSS for default styling.
 
 ## Built With
 
