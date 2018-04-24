@@ -2,7 +2,7 @@
 
 !['tree_structure'](https://raw.githubusercontent.com/mkhuda/mith-express/master/tree-structure.png)
 
-Basic Mithril, built with Express. This project also uses JSX via Babel Plugin. It doesn't seems like standard Mithril because I use JSX as syntax extension, but you can use Hyperscript if really want. The freedom of optional by Mithril.
+Basic Mithril, built with Express. This project also uses JSX via Babel Plugin, but mainly using Hyperscript to support Server side rendering.
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ These instructions will get you a copy of the project up and running on your loc
 $ npm install
 $ npm run dev
 ```
-- Testing
+- Testing (Using Jest)
 ```
 $ npm test
 ```
@@ -33,7 +33,8 @@ This project still maintaining but you can create Mithril based app through this
 
 * [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
 * [Mithril](https://mithril.js.org) - Mithril is a modern client-side Javascript framework for building Single Page Applications
-* [Bootstrap](https://www.npmjs.com/package/bootstrap) - Bootstrap v.4
+* [Webpack](https://webpack.js.org) - Webpack is used to compile JavaScript modules.
+* [SpectreCSS](https://picturepan2.github.io/spectre/) - a Lightweight, Responsive and Modern CSS Framework
 
 ## Authors
 
