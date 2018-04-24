@@ -30,7 +30,7 @@ const layoutServer = {
         ]),
         m('body.server', [
           vnode.children,
-          m('script', { src: 'bundle.js' }),
+          m('script', { src: 'bundle.min.js' }),
         ]),
       ]),
     ];
