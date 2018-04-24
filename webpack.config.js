@@ -3,23 +3,23 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const SuppressEntryChunksPlugin = require('./libs/SuppressEntryChunksPlugin');
 
 const extractSass = new ExtractTextPlugin({
-  filename: 'application.css',
+  filename: '[name].css',
   disable: process.env.NODE_ENV === 'development',
 });
 
 module.exports = {
-  entry: './src/index.js',
+  name: 'client',
+  target: 'web',
+  entry: {
+    'bundle': './src/index.js',
+    'application': './spectre/style.scss',
+  },
   output: {
     path: path.resolve(__dirname, './build'),
-    filename: 'bundle.js',
-  },
-  devServer: {
-    contentBase: path.join(__dirname, './build'),
-    compress: true,
-    port: 9000,
-    hot: true,
+    filename: '[name].min.js',
   },
   module: {
     rules: [
@@ -51,13 +51,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['build']),
+    new SuppressEntryChunksPlugin(['application']),
     new UglifyJsPlugin({
       test: /\.js($|\?)/i,
-    }),
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.ProvidePlugin({
-      m: 'mithril',
     }),
     extractSass,
   ],
