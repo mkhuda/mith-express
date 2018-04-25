@@ -1,7 +1,6 @@
 module.exports = {
   'env': {
-    'browser': true,
-    'jest/globals': true,
+    'browser': true
   },
   'extends': 'airbnb-base',
   'parser': 'babel-eslint',
@@ -13,5 +12,5 @@ module.exports = {
   },
   'globals': {
     'm': false
-  },
+  }
 };

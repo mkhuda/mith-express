@@ -11,7 +11,7 @@
     "watch:build": "webpack -p",
     "watch:server": "nodemon server --watch src/",
     "start:production": "node server",
-    "test": "jest",
+    "test": "ospec",
     "babel-test": "rm -rf test-utils/* && babel src --out-dir test-utils/",
     "postinstall": "webpack -p",
     "webpack:dev": "webpack-dev-server -d --color"
