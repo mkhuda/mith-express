@@ -14,6 +14,9 @@ const layoutClient = {
 };
 
 const layoutServer = {
+  oninit(vnode) {
+    vnode.state.pageTitle = vnode.attrs.pageTitle;
+  },
   view(vnode) {
     return [
       m('!DOCTYPE[html]'),
@@ -22,7 +25,7 @@ const layoutServer = {
           m('meta', { charset: 'utf-8' }),
           m('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }),
           m('meta', { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }),
-          m('title', getTitle(vnode.attrs.pageTitle)),
+          m('title', getTitle(vnode.state.pageTitle)),
           m('link', { rel: 'stylesheet', href: 'application.css' }),
         ]),
         m('body.server', [
