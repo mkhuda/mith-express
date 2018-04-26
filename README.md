@@ -1,4 +1,4 @@
-# Mithril JS and Express (Boilerplate) [![Build Status](https://travis-ci.org/mkhuda/mith-express.svg?branch=master)](https://travis-ci.org/mkhuda/mith-express) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c355526df7d41139076c55a3f769ef4)](https://www.codacy.com/app/mkhuda/mith-express?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mkhuda/mith-express&amp;utm_campaign=Badge_Grade)
+# Mithril JS and Express (Boilerplate - Learning Purpose) [![Build Status](https://travis-ci.org/mkhuda/mith-express.svg?branch=master)](https://travis-ci.org/mkhuda/mith-express) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c355526df7d41139076c55a3f769ef4)](https://www.codacy.com/app/mkhuda/mith-express?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mkhuda/mith-express&amp;utm_campaign=Badge_Grade)
 
 !['tree_structure'](https://raw.githubusercontent.com/mkhuda/mith-express/master/tree-structure.png)
 
@@ -25,9 +25,9 @@ $ npm run dev
 $ npm test
 ```
 
-### Development Purpose
+### Development Purpose & Learning Purpose
 
-This project still maintaining but you can create Mithril based app through this boiler work. I also added Spectre CSS for default styling.
+This project is under maintaining but you can create Mithril based app through this boiler work. Fork and learn it I also added Spectre CSS for default styling.
 
 ## Built With
 
