@@ -1,10 +1,12 @@
 const m = require('mithril');
 const Layout = require('./Layout');
 const Footer = require('../components/Footer');
+const User = require('../actions/User');
 
 module.exports = {
   oninit() {
     this.state = { pageTitle: 'User List' };
+    User.loadList();
   },
   view() {
     return [
@@ -13,12 +15,15 @@ module.exports = {
           m('br'), m('br'), m('br'), m('br'), m('br'),
           m('.text-center', m('h2', 'And this is the other page')),
           m('br'),
-          m('.text-center', m(
-            'a[class=btn][href=/]',
-            { oncreate: m.route.link },
-            m('i.icon icon-arrow-left'),
-            'Back to home page',
-          )),
+          m('.text-center', [
+            m('br'),
+            m('.columns', m('.column col-12 col-mx-auto', [
+              User.list.map(user => m('span.chip', user)),
+            ])),
+            m('br'),
+            m('br'),
+            m('a[class=btn btn-sm][href=/]', { oncreate: m.route.link }, m('i.icon icon-arrow-left'), 'Back to home page'),
+          ]),
           m(Footer),
         ]),
       ]))),
