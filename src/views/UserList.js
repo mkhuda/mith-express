@@ -4,13 +4,13 @@ const Footer = require('../components/Footer');
 const User = require('../actions/User');
 
 module.exports = {
-  oninit(vnode) {
-    vnode.state.pageTitle = 'User List';
+  oninit() {
+    this.state = { pageTitle: 'User List' };
     User.loadList();
   },
-  view(vnode) {
+  view() {
     return [
-      m(Layout, vnode.state, m('.container', m('.columns', [
+      m(Layout, this.state, m('.container', m('.columns', [
         m('.column col-6 col-mx-auto', [
           m('br'), m('br'), m('br'), m('br'), m('br'),
           m('.text-center', m('h2', 'And this is the other page')),
