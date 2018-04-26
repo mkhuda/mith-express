@@ -1,24 +1,28 @@
 const m = require('mithril');
 const Layout = require('./Layout');
 const Footer = require('../components/Footer');
+const { getUsers } = require('../actions/user');
 
 module.exports = {
-  oninit() {
-    this.state = { pageTitle: 'User List' };
+  oninit(vnode) {
+    vnode.state.pageTitle = 'User List';
+    getUsers()
+      .then((data) => {
+        Object.assign(vnode.state, { data });
+      });
   },
-  view() {
+  view(vnode) {
     return [
-      m(Layout, this.state, m('.container', m('.columns', [
+      m(Layout, vnode.state, m('.container', m('.columns', [
         m('.column col-6 col-mx-auto', [
           m('br'), m('br'), m('br'), m('br'), m('br'),
           m('.text-center', m('h2', 'And this is the other page')),
           m('br'),
-          m('.text-center', m(
-            'a[class=btn][href=/]',
-            { oncreate: m.route.link },
-            m('i.icon icon-arrow-left'),
-            'Back to home page',
-          )),
+          m('.text-center', [
+            m('a[class=btn][href=/]', { oncreate: m.route.link }, 'Back to home page'),
+            m('br'),
+            m('.column', JSON.stringify(vnode.state.data)),
+          ]),
           m(Footer),
         ]),
       ]))),
