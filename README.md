@@ -29,6 +29,9 @@ $ npm test
 
 This project is under maintaining but you can create Mithril based app through this boiler work. Fork and learn it I also added Spectre CSS for default styling.
 
+### Todos
+- Meiosis implementation concept
+
 ## Built With
 
 * [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
